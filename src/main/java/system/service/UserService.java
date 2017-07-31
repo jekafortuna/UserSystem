@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * Created by Evgeniy on 28.07.2017.
+ * Class of service elements
  */
 
 @Service

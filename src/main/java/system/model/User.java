@@ -2,9 +2,16 @@ package system.model;
 
 /**
  * Created by Evgeniy on 28.07.2017.
+ * Model unit of MVC pattern
  */
 public class User {
+    /**
+     * login of user
+     */
     private String login;
+    /**
+     * password of user
+     */
     private String password;
 
     public User() {}

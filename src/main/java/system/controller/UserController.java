@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * Created by Evgeniy on 28.07.2017.
- * Controller element of MVC pattern
+ * Controller unit of MVC pattern
  */
 
 @Controller
@@ -40,7 +40,10 @@ public class UserController {
     @RequestMapping(value = "/check", method = RequestMethod.POST)
     public @ResponseBody String checkUser(@ModelAttribute("UserFromServer") User user){
         if ("admin".equals(user.getLogin()) && "admin".equals(user.getPassword())){
-            return "valid user";
-        } else return "invalid user";
+            return "valid admin user";
+        } else if ("user1".equals(user.getLogin()) && "user1".equals(user.getPassword())){
+            return "valid simple user";
+        }
+        else return "unknown user";
     }
 }
